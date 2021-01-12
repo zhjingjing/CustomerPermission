@@ -4,6 +4,21 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
+    signingConfigs {
+        release {
+            storeFile file('../system/zh.jks')
+            storePassword 'zh123456'
+            keyAlias 'zh'
+            keyPassword 'zh123456'
+        }
+        debug {
+            storeFile file('../system/zh.jks')
+            storePassword 'zh123456'
+            keyAlias 'zh'
+            keyPassword 'zh123456'
+        }
+    }
+
 
     defaultConfig {
         applicationId "com.zh.test"

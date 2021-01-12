@@ -6,7 +6,7 @@
         android:name="com.zh.permission.auth"
         android:description="@string/app_name"
         android:label="start private view"
-        android:protectionLevel="normal" />
+        android:protectionLevel="dangerous" />
 
     <application
         android:allowBackup="true"
