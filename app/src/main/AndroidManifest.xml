@@ -6,7 +6,10 @@
         android:name="com.zh.permission.auth"
         android:description="@string/app_name"
         android:label="start private view"
-        android:protectionLevel="dangerous" />
+        android:protectionLevel="signature" />
+
+    <!--    dangerous:动态权限申请，（荣耀10直接就给了权限，不需要申请，华为p30 需要动态申请）-->
+    <!--    signature:必须是相同签名的才能访问。-->
 
     <application
         android:allowBackup="true"
@@ -15,10 +18,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PrivateActivity"
-            android:permission="com.zh.permission.auth"
+        <activity
+            android:name=".PrivateActivity"
             android:exported="true"
-            ></activity>
+            android:permission="com.zh.permission.auth"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
